@@ -24,8 +24,9 @@ def calculate_price(price, cash_coupon, percent_coupon):
 
     tax = final_price * .06
     total = final_price + tax + shipping
+    roundedTotal = round(total,2)
 
-    return total
+    return roundedTotal
 
 
 def customer_order():
@@ -33,8 +34,8 @@ def customer_order():
     cash_coupon = int(input("How much is your cash coupon? "))
     percent_coupon = int(input("How much is your percent coupon? "))
     total_cost = calculate_price(price, cash_coupon, percent_coupon)
-    rounded_total = round(total_cost, 2)
-    print("The you total cost is $",rounded_total)
+
+    print("The you total cost is $",total_cost)
 
 
 if __name__ == '__main__':
