@@ -8,7 +8,8 @@ def average(score1, score2, score3):
 def run_average():
     score1 = int(input("Enter the first score "))
     try:
-        score1 > 0
+        if score1 > 0:
+            raise ValueError
     except:
         print("your value was less than 0")
         # score1  =  int(input("You did not enter a positive number, please try again "))
